@@ -22,6 +22,12 @@
            ga('create', 'UA-61957878-1', 'auto');
            ga('send', 'pageview');
         </script>
+        
+        <!-- for the awesome table using the Data Tables Plugin -->
+        <!-- DataTables CSS -->
+        <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.6/css/jquery.dataTables.css">
+        <!-- DataTables JS -->
+        <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.6/js/jquery.dataTables.js"></script>
 
     </head>
     <body>
@@ -44,11 +50,16 @@
 
             <!-- here come the tweets -->
         
+    <script>
+        $(document).ready(function(){
+            $('#tweets').DataTable();
+        });
+    </script>
     <div class='container-fluid'>
         <div class='row-fluid'>
             <h4> New tweets will be collected every 10 minutes </h4>
             
-            <table id='tweets' class='table-striped table-condensed' width='100%'>
+            <table id='tweets' class='table table-bordered table-hover' width='100%'>
                 <thead>
                    <tr>
                        <td> Awesome Tweet! </td>
